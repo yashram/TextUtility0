@@ -35,7 +35,7 @@ export default function Navbar(props) {
         </li>
       </ul>
       <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <input className="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
       <div className={`form-check form-switch mx-2 text-${props.yashmode === 'dark' ? 'light':'dark'}`}>
@@ -43,8 +43,8 @@ export default function Navbar(props) {
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.yashswitch}</label>
 </div>
 <div className="form-check form-switch">
-  <input className="form-check-input" onClick={props.yashBlue} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-  <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Blue Mode</label>
+  <input className="form-check-input" onClick={props.yashBlue} type="checkbox" role="switch" id="flexSwitchCheckDefault1"/>
+  <label className="form-check-label" htmlFor="flexSwitchCheckDefault1">Blue Mode</label>
 </div>
     </div>
   </div>

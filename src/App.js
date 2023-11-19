@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import AboutUs from './components/AboutUs';
 import Alert from './components/Alert';
-import NoPage from './components/NoPage.js';
+//import NoPage from './components/NoPage.js';
 import React, {useState} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -68,16 +68,16 @@ const toggleMode1 = () => {
   
 return (
   <>
-         
-           <Navbar  title= "TextUtility" yashswitch = {text1} yashmode = {mode} yashBlue={toggleMode1} yashToggleMode={toggleMode} aboutYash= "about website" homeYash = "Home" dropdownYash= "Dropdown"  disabledYash = "Disabled"/>
+         <Navbar  title= "TextUtility" yashswitch = {text1} yashmode = {mode} yashBlue={toggleMode1} yashToggleMode={toggleMode} aboutYash= "about website" homeYash = "Home" dropdownYash= "Dropdown"  disabledYash = "Disabled"/>
                 <Alert yashAlert={alert}></Alert>
+          
             <div className="container my-3">
-              <BrowserRouter>
+             <BrowserRouter basename = "/TextUtility0">
+             
                 <Routes>
-                   <Route index element={<TextForm yashShowAlert={showAlert} headingYash= "Enter your text" yashmode = {mode}></TextForm>}  /> 
+                   <Route exact path="/TextUtility0" element={<TextForm yashShowAlert={showAlert} headingYash= "Enter your text" yashmode = {mode}></TextForm>}  /> 
                    <Route path="/home" element ={<TextForm yashShowAlert={showAlert} headingYash= "Enter your text" yashmode = {mode}></TextForm>}/>
                    <Route path="/about" element ={<AboutUs heading = "About Us"> </AboutUs>}/>
-                   <Route path="*" element = {<NoPage></NoPage>}/>
                 </Routes>
               </BrowserRouter>    
              </div>
