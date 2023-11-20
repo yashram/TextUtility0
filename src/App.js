@@ -6,7 +6,7 @@ import AboutUs from './components/AboutUs';
 import Alert from './components/Alert';
 //import NoPage from './components/NoPage.js';
 import React, {useState} from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 
@@ -72,14 +72,11 @@ return (
                 <Alert yashAlert={alert}></Alert>
           
             <div className="container my-3">
-             <BrowserRouter basename = "/TextUtility0">
              
-                <Routes>
-                   <Route exact path="/TextUtility0" element={<TextForm yashShowAlert={showAlert} headingYash= "Enter your text" yashmode = {mode}></TextForm>}  /> 
-                   <Route path="/home" element ={<TextForm yashShowAlert={showAlert} headingYash= "Enter your text" yashmode = {mode}></TextForm>}/>
-                   <Route path="/about" element ={<AboutUs heading = "About Us"> </AboutUs>}/>
-                </Routes>
-              </BrowserRouter>    
+                   <TextForm yashShowAlert={showAlert} headingYash= "Enter your text" yashmode = {mode}></TextForm>
+                  
+                   <AboutUs heading = "About Us"> </AboutUs>
+                 
              </div>
              
   </>
