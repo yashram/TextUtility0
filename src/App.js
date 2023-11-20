@@ -70,10 +70,12 @@ return (
   <>
          <Navbar  title= "TextUtility" yashswitch = {text1} yashmode = {mode} yashBlue={toggleMode1} yashToggleMode={toggleMode} aboutYash= "about website" homeYash = "Home" dropdownYash= "Dropdown"  disabledYash = "Disabled"/>
                 <Alert yashAlert={alert}></Alert>
+
+                <TextForm yashShowAlert={showAlert} headingYash= "Enter your text" yashmode = {mode}></TextForm>
           
             <div className="container my-3">
              
-                   <TextForm yashShowAlert={showAlert} headingYash= "Enter your text" yashmode = {mode}></TextForm>
+                  
                   
                    <AboutUs heading = "About Us"> </AboutUs>
                  
